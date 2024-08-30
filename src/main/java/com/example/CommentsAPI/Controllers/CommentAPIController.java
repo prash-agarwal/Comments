@@ -25,10 +25,10 @@ public class CommentAPIController {
 	public String getCommentsByUsername(@RequestParam("username")String username){
 		return commentAPIService.getCommentsByUsername(username);
 	}
-//
-//	@GetMapping("/api/v2/comments/search?date={date}")
-//	public String getCommentsByUsername(@RequestParam("date")Date date){
-//		return commentAPIService.getCommentsByDate(date);
-//	}
+
+	@GetMapping("/api/v2/comments/search?date={date}")
+	public String getCommentsByUsername(@RequestParam("date")Date date){
+		return commentAPIService.getCommentsByDate(date);
+	}
 	
 }
