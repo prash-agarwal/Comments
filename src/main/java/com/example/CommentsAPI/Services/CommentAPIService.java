@@ -31,9 +31,9 @@ public class CommentAPIService {
 		return commentApiRepoInterface.findComment(username).getText();
 	}
 	
-	public String getCommentsByDate(Date date) {
-		// TODO Auto-generated method stub
-		return commentApiRepoInterface.findCommentByDate(date).getText();
-	}
+//	public String getCommentsByDate(Date date) {
+//		// TODO Auto-generated method stub
+//		return commentApiRepoInterface.findCommentByDate(date).getText();
+//	}
 
 }

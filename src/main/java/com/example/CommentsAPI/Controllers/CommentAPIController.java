@@ -26,9 +26,9 @@ public class CommentAPIController {
 		return commentAPIService.getCommentsByUsername(username);
 	}
 
-	@GetMapping("/api/v2/comments/search?date={date}")
-	public String getCommentsByUsername(@RequestParam("date")Date date){
-		return commentAPIService.getCommentsByDate(date);
-	}
+//	@GetMapping("/api/v2/comments/search?date={date}")
+//	public String getCommentsByUsername(@RequestParam("date")Date date){
+//		return commentAPIService.getCommentsByDate(date);
+//	}
 	
 }
