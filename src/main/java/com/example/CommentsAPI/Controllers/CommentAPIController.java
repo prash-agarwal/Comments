@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.CommentsAPI.Models.Comment;
@@ -21,14 +23,16 @@ public class CommentAPIController {
 		return commentAPIService.getAllComments();
 	}
 
-	@GetMapping("/api/v2/comments/search?username={username}")
+	@PostMapping("/api/v2/comments/search")
 	public String getCommentsByUsername(@RequestParam("username")String username){
+		
 		return commentAPIService.getCommentsByUsername(username);
 	}
 
-//	@GetMapping("/api/v2/comments/search?date={date}")
-//	public String getCommentsByUsername(@RequestParam("date")Date date){
-//		return commentAPIService.getCommentsByDate(date);
-//	}
+	@PostMapping("/api/v2/comments/search1")
+	public String getCommentsByUsername(@RequestParam("date")Date date){
+		System.out.println("world");
+		return commentAPIService.getCommentsByDate(date);
+	}
 	
 }

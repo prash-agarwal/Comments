@@ -9,5 +9,4 @@ public class CommentsApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CommentsApiApplication.class, args);
 	}
-
 }

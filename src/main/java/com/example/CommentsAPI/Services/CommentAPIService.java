@@ -28,12 +28,14 @@ public class CommentAPIService {
 
 	public String getCommentsByUsername(String username) {
 		// TODO Auto-generated method stub
+		System.out.println("hello");
 		return commentApiRepoInterface.findComment(username).getText();
 	}
 	
-//	public String getCommentsByDate(Date date) {
-//		// TODO Auto-generated method stub
-//		return commentApiRepoInterface.findCommentByDate(date).getText();
-//	}
+	public String getCommentsByDate(Date date) {
+	// TODO Auto-generated method stub
+	//return commentApiRepoInterface.findCommentByDate(date).getText();
+		return "hello";
+}
 
 }
