@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,7 +31,7 @@ public class CommentAPIController {
 	}
 
 	@PostMapping("/api/v2/comments/search1")
-	public String getCommentsByUsername(@RequestParam("date")Date date){
+	public String getCommentsByUsername(@RequestParam("date")@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)Date date){
 		System.out.println("world");
 		return commentAPIService.getCommentsByDate(date);
 	}
