@@ -16,7 +16,7 @@ public interface CommentApiRepoInterface extends JpaRepository<Comment,Integer>{
     Comment findComment(String username);
 	
 	
-	@Query(value = "select a from Comment a where a.date = :date")
-    Comment findCommentByDate(Date date);
+//	@Query(value = "select a from Comment a where a.date = :date")
+//    Comment findCommentByDate(Date date);
 	
 }
